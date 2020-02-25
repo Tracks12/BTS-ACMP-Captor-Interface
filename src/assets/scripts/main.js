@@ -7,10 +7,11 @@
  */
 
 $(document).ready(() => {
+	// Initialisation de la map
 	mapInit();
 
-	// HIGH CHART HERE
-	
+	// HIGH CHART CODE HERE
+
 });
 
 /**
