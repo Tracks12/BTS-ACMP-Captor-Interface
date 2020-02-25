@@ -1,5 +1,5 @@
 # Captor-Web-BTS
-Projet de Groupe Capteur dans le cadre de la formation BTS 2e Année
+Projet de Groupe Capteur dans le cadre de la formation BTS 2e année
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
