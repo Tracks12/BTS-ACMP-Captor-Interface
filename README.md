@@ -40,3 +40,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Installation of Angular Material
 
 Run `ng add @angular/material` to install Angular Material dependencies.
+
+To create another component, check the documentation to [Angular Material Component](https://material.angular.io/components/categories).
