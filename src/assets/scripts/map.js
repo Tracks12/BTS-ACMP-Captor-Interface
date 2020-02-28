@@ -113,7 +113,7 @@ function mapInit() {
 	// Création d'une instance routing de service
 	var router = platform.getRoutingService();
 
-	// Appel de l'api pour calcul des marqueur
+	// Appel de l'api pour calcul des marqueurs
 	router.calculateIsoline(
 		routingParams,
 		(result) => {
