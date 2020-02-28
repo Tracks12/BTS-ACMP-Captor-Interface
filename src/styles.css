@@ -25,3 +25,6 @@ body {
 	transform: translate(-50%, -50%);
 	width: 100vw;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

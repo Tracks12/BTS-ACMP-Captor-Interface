@@ -130,7 +130,7 @@ function mapInit() {
 
 			// Création d'un polygon pour la représentation du marqueur
 			isolinePolygon = new H.map.Polygon(linestring);
-			//isolineCenter = new H.map.Marker(center)
+			isolineCenter = new H.map.Marker(center)
 
 			// Ajout du marqueur sur la map
 			map.addObject(isolinePolygon);
