@@ -13,7 +13,7 @@ Install Angular CLI with `npm install -g @angular/cli`
 
 Install JQuery with `npm install jquery`
 
-### Installation of Angular Material
+### Angular Material
 
 Run `ng add @angular/material` to install Angular Material dependencies.
 
