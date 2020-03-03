@@ -1,7 +1,7 @@
 /**
  * Project  : Capteur ACMP
  * Date     : 25/05/2020
- * Autor    : CARDINAL Florian
+ * Autor    : CARDINAL Florian, MENEGHINI Eric, PHILIPPE Flore
  * Nom      : main.js
  * Location : /assets/scripts/
  */
@@ -82,7 +82,7 @@ $(document).ready(() => {
       }
 
   });
-  
+
 });
 
 /**
