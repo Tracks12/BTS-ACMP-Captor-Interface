@@ -5,3 +5,34 @@
  * Nom      : main.css
  * Location : /assets/styles/
  */
+
+* {
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+app-nav-top {
+	background: rgb(0, 150, 250);
+	padding: .75em;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+app-nav-top a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+app-nav-top .material-icons {
+	font-size: 1em;
+}
+
+.titl {
+	text-transform: uppercase;
+}
+
+#map {
+	z-index: 0;
+}

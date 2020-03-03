@@ -85,12 +85,6 @@ $(document).ready(() => {
 
 });
 
-/**
- * END
- */
-
-
-
  var gaugeOptions = {
      chart: {
          type: 'solidgauge'
@@ -201,6 +195,6 @@ $(document).ready(() => {
      }
  }, 2000);
 
- /**
-  * END
-  */
+/**
+ * END
+ */
