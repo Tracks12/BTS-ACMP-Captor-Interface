@@ -1,11 +1,7 @@
 /**
  * Project  : Capteur ACMP
  * Date     : 25/05/2020
-<<<<<<< HEAD
  * Autor    : CARDINAL Florian, MENEGHINI Eric, PHILIPPE Flore
-=======
- * Autor    : CARDINAL Florian, MENIGHINI Eric, PHILIPPE Flore
->>>>>>> 805e492949f793d62f75132ac6e0ac3d1bf947a3
  * Nom      : main.js
  * Location : /assets/scripts/
  */
