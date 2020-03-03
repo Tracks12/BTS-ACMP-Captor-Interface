@@ -3,6 +3,12 @@ Sensor Group Project as part of the BTS 2nd year training course
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
+## Website dependencies
+
+Query of Front End dependencies :
+
+* [JQuery 3.4.1](https://api.jquery.com/)
+
 ## Install Angular CLI & Dependencies
 
 ### Angular

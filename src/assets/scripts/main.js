@@ -151,9 +151,7 @@ createChart();
              valueSuffix: 'CO2'
          }
      }]
-
  }));
-});
 
  // Bring life to the dials
  setInterval(function () {
