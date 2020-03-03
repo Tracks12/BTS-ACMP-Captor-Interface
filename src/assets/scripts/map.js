@@ -104,7 +104,7 @@ function mapInit() {
 
 	var myLoc = `${myPos.lat},${myPos.lng}`;
 	var routingParams = {
-		'mode': 'fastest;car;',
+		'mode': 'fastest;car;traffic:enabled',
 		'start': myLoc,
 		'range': '600',
 		'rangetype': 'time'

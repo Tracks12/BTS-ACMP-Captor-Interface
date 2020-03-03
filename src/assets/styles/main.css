@@ -10,6 +10,19 @@
 	font-family: 'Roboto', Arial, sans-serif;
 }
 
+.titl {
+	text-transform: uppercase;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid rgba(255, 255, 255, .25);
+}
+
+#map {
+	z-index: 0;
+}
+
 app-nav-top {
 	background: rgb(0, 150, 250);
 	padding: .75em;
@@ -27,12 +40,4 @@ app-nav-top a {
 
 app-nav-top .material-icons {
 	font-size: 1em;
-}
-
-.titl {
-	text-transform: uppercase;
-}
-
-#map {
-	z-index: 0;
 }
