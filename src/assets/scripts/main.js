@@ -11,64 +11,6 @@ $(document).ready(() => {
 	mapInit();
 
 	// HIGH CHART CODE HERE
-<<<<<<< HEAD
-//line graph (test)
-  Highcharts.chart('container', {
-      yAxis: {
-          title: {
-              text: 'Number of Employees'
-          }
-      },
-      xAxis: {
-          accessibility: {
-              rangeDescription: 'Range: 2010 to 2017'
-          }
-      },
-      legend: {
-          layout: 'vertical',
-          align: 'right',
-          verticalAlign: 'middle'
-      },
-      plotOptions: {
-          series: {
-              label: {
-                  connectorAllowed: false
-              },
-              pointStart: 2010
-          }
-      },
-      series: [{
-          name: 'Installation',
-          data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-      }, {
-          name: 'Manufacturing',
-          data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-      }, {
-          name: 'Sales & Distribution',
-          data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-      }, {
-          name: 'Project Development',
-          data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-      }, {
-          name: 'Other',
-          data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-      }],
-      responsive: {
-          rules: [{
-              condition: {
-                  maxWidth: 500
-              },
-              chartOptions: {
-                  legend: {
-                      layout: 'horizontal',
-                      align: 'center',
-                      verticalAlign: 'bottom'
-                  }
-              }
-          }]
-      }
-  });
-=======
 
 //js graphe particule fines
 var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte
@@ -119,7 +61,6 @@ createChart();
 
 
 });// OU FAUT-IL METTRE CA?
->>>>>>> 16030c417e4c744020ff97ab5e7ac23a12dc418c
 
 
  var gaugeOptions = {
