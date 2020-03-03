@@ -89,6 +89,8 @@ $(document).ready(() => {
  * END
  */
 
+
+
  var gaugeOptions = {
      chart: {
          type: 'solidgauge'
@@ -198,3 +200,7 @@ $(document).ready(() => {
          point.update(newVal);
      }
  }, 2000);
+
+ /**
+  * END
+  */

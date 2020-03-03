@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+/**Solid Gauge */
+.highcharts-figure .chart-container {
+	width: 300px;
+	height: 200px;
+	float: left;
+}
+
+>>>>>>> 9fed9742553a3c530a9a5ef894248a7b6dedc725
 .highcharts-figure, .highcharts-data-table table {
     min-width: 360px;
     max-width: 800px;
@@ -31,3 +41,22 @@
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 600px) {
+	.highcharts-figure, .highcharts-data-table table {
+		width: 100%;
+	}
+	.highcharts-figure .chart-container {
+		width: 300px;
+		float: none;
+		margin: 0 auto;
+	}
+
+}
+
+/**
+ * END
+ */
+>>>>>>> 9fed9742553a3c530a9a5ef894248a7b6dedc725
