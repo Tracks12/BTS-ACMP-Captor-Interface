@@ -8,6 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Query of Front End dependencies :
 
 * [JQuery 3.4.1](https://api.jquery.com/)
+* [Highcharts](https://www.highcharts.com/docs/index)
+* [Here Technologies API](https://developer.here.com/documentation/maps/dev_guide/index.html)
+* [Angular Material](https://material.angular.io/)
 
 ## Install Angular CLI & Dependencies
 
