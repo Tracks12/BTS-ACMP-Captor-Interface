@@ -11,9 +11,21 @@ Solid Gauge
 ERIC MET LE NOM DE TON GRAPH ERIIIIIIIIIIC
  -->
 <figure class="highcharts-figure">
-    <div id="container"></div>
+    <div id="container-ps"></div> <!--ps = particle sensors-->
     <p class="highcharts-description"></p>
 </figure>
+<div class="ld-row">
+	<label class="ld-label">
+		Enable Polling
+	</label>
+	<input type="checkbox" checked="checked" id="enablePolling"/>
+</div>
+<div class="ld-row">
+	<label class="ld-label">
+		Polling Time (Seconds)
+	</label>
+	<input class="ld-time-input" type="number" value="2" id="pollingTime"/>
+</div>
 
 <!--
  END
