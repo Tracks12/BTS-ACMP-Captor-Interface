@@ -5,6 +5,15 @@
  * Nom      : main.js
  * Location : /assets/scripts/
  */
+ $(document).ready(() => {
+ 	// Initialisation de la map
+ 	$('#map').ready(() => mapInit());
+
+ 	$('#menu-content').ready(() => {
+ 		$('#menu-open').click(() => $('#menu-content').fadeIn());
+ 		$('#menu-close').click(() => $('#menu-content').fadeOut());
+ 	});
+
 
  var gaugeOptions = {
  	chart: {
@@ -61,60 +70,6 @@
  	}
  };
 
-$(document).ready(() => {
-	// Initialisation de la map
-	$('#map').ready(() => mapInit());
-
-	$('#menu-content').ready(() => {
-		$('#menu-open').click(() => $('#menu-content').fadeIn());
-		$('#menu-close').click(() => $('#menu-content').fadeOut());
-	});
-
-	//js graphe particule fines
-	var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte
-	var urlInput = $('#fetchURL')[0];
-	var pollingCheckbox = $('#enablePolling')[0];
-	var pollingInput = $('#pollingTime')[0];
-
-	function createChart() {
-		Highcharts.chart('container', {
-			chart: {
-				type: 'spline'
-			},
-			title: {
-				text: 'Live Data'
-			},
-			accessibility: {
-				announceNewData: {
-					enabled: true,
-					minAnnounceInterval: 15000,
-					announcementFormatter: function (allSeries, newSeries, newPoint) {
-						if(newPoint)
-							return `New point added. Value: ${newPoint.y}`;
-
-						return false;
-					}
-				}
-			},
-			data: {
-				csvURL: urlInput.value,
-				enablePolling: pollingCheckbox.checked === true,
-				dataRefreshRate: parseInt(pollingInput.value, 10)
-			}
-		});
-
-		if(pollingInput.value < 1 || !pollingInput.value)
-			pollingInput.value = 1;
-	}
-
-	urlInput.value = defaultData;
-
-	// We recreate instead of using chart update to make sure the loaded CSV
-	// and such is completely gone.
-	pollingCheckbox.onchange = urlInput.onchange = pollingInput.onchange = createChart;
-
-	// Create the chart
-	createChart();
 
 	// The Co2 gauge
 	var chartCo2 = Highcharts.chart('container-co2', Highcharts.merge(gaugeOptions, {
