@@ -8,9 +8,12 @@
 
 $(document).ready(() => {
 	// Initialisation de la map
-	mapInit();
+	$('#map').ready(() => mapInit());
 
-	// HIGH CHART CODE HERE
+	$('#menu-content').ready(() => {
+		$('#menu-open').click(() => $('#menu-content').fadeIn());
+		$('#menu-close').click(() => $('#menu-content').fadeOut());
+	});
 
 //js graphe particule fines
 var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte

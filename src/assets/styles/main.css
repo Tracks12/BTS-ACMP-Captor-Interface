@@ -6,38 +6,37 @@
  * Location : /assets/styles/
  */
 
+@font-face {
+	font-family: "ROCKET";
+	src: url('../fonts/ROCKET/ROCKET_WILDNESS.otf') format("otf"),
+		url('../fonts/ROCKET/ROCKET_WILDNESS.ttf') format("ttf"),
+		url('../fonts/ROCKET/ROCKET_WILDNESS.woff') format("woff");
+}
+
 * {
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-.titl {
-	text-transform: uppercase;
+html, body {
+	height: 100%;
+	width: 100%;
 }
 
-hr {
-	border: none;
-	border-top: 1px solid rgba(255, 255, 255, .25);
+body {
+	font-family: "Lato", Ubuntu, Roboto, "Helvetica Neue", sans-serif;
+	margin: 0;
 }
 
 #map {
-	z-index: 0;
+	background: rgb(238, 238, 238);
+	height: 100vh;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100vw;
 }
 
-app-nav-top {
-	background: rgb(0, 150, 250);
-	padding: .75em;
-	position: fixed;
-	width: 100%;
-	z-index: 1;
-}
-
-app-nav-top a {
-	color: rgb(255, 255, 255);
-	text-decoration: none;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-app-nav-top .material-icons {
-	font-size: 1em;
-}
+html, body { height: 100%; }

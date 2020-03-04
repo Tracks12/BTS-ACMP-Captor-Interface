@@ -106,7 +106,7 @@ function mapInit() {
 	var routingParams = {
 		'mode': 'fastest;car;traffic:enabled',
 		'start': myLoc,
-		'range': '600',
+		'range': '900',
 		'rangetype': 'time'
 	};
 

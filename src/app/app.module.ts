@@ -29,7 +29,7 @@ import { AdminPaneComponent } from './admin-pane/admin-pane.component';
 		LoginComponent,
 		NavTopComponent,
 		TelemetryComponent,
-		AdminPaneComponent
+		AdminPaneComponent,
 	],
 	bootstrap: [
 		AppComponent

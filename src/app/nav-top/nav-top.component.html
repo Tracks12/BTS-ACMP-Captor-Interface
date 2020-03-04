@@ -1,20 +1,33 @@
-<div>
+<header>
 	<a [routerLink]="['/']">
-		<h1 class="titl"><i class="material-icons">wifi</i> acmp</h1>
+		<h1 class="titl"><i class="material-icons">wifi</i>acmp</h1>
 	</a>
-	<div id="menu-btn"></div>
+</header>
+
+<div id="menu-open">
+	<i class="material-icons">menu</i>
 </div>
 
-<ul class="menu-content">
-	<li>
-		<a [routerLink]="['/telemetry']" class="button fancy-button">
-			<i class="material-icons">av_timer</i> télémetrie
-		</a>
-	</li>
-	<hr/>
-	<li>
-		<a [routerLink]="['/login']" class="button fancy-button">
-			<i class="material-icons">perm_identity</i> connexion
-		</a>
-	</li>
-</ul>
+<nav id="menu-content">
+	<div id="menu-close">
+		<i class="material-icons">close</i>
+	</div>
+
+	<ul class="menu-content">
+		<li>
+			<a [routerLink]="['/']" class="button fancy-button">
+				<i class="material-icons">map</i> map
+			</a>
+		</li>
+		<li>
+			<a [routerLink]="['/telemetry']" class="button fancy-button">
+				<i class="material-icons">av_timer</i> télémetrie
+			</a>
+		</li>
+		<li>
+			<a [routerLink]="['/login']" class="button fancy-button">
+				<i class="material-icons">perm_identity</i> connexion
+			</a>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,60 @@
+
+a {
+	color: rgb(255, 255, 255);
+	display: block;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+header {
+	background: rgb(0, 150, 250);
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+header h1 {
+	font-family: "ROCKET", sans-serif;
+	letter-spacing: .25em;
+	padding: .5em .75em;
+	text-transform: uppercase;
+}
+
+#menu-open,
+#menu-close {
+	background: rgb(0, 150, 250);
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 1em;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+#menu-content {
+	background: rgb(0, 150, 250);
+	bottom: 0;
+	display: none;
+	letter-spacing: 3px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+#menu-close {
+	position: absolute;
+}
+
+ul {
+	list-style-type: none;
+	padding-top: 4em;
+}
+
+ul li a {
+	padding: .75em 2em .75em 1em;
+}
