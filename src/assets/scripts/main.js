@@ -8,11 +8,40 @@
  $(document).ready(() => {
  	// Initialisation de la map
  	$('#map').ready(() => mapInit());
-
  	$('#menu-content').ready(() => {
- 		$('#menu-open').click(() => $('#menu-content').fadeIn());
- 		$('#menu-close').click(() => $('#menu-content').fadeOut());
+ 	$('#menu-open').click(() => $('#menu-content').fadeIn());
+ 	$('#menu-close').click(() => $('#menu-content').fadeOut());
  	});
+
+//code js pour capteur particules (bar chart)
+    document.addEventListener('DOMContentLoaded', function () {     //???? ligne obligatoire
+          var myChart = Highcharts.chart('container', {
+              chart: {
+                  type: 'bar'   //type de graphique
+              },
+              title: {
+                  text: 'Fruit Consumption'   //nom du graphique
+              },
+              xAxis: {
+                  categories: ['Apples', 'Bananas', 'Oranges']  //nom données axe ordonnées
+              },
+              yAxis: {
+                  title: {
+                      text: 'Fruit eaten'   //nom donnée axe abscisses
+                  }
+              },
+              series: [{    //toutes les données (avec leurs nom et leurs données)
+                  name: 'Jane',
+                  data: [1, 2.5, 4]
+              }, {
+                  name: 'John',
+                  data: [5, 7, 3]
+              }]
+          });
+      });
+
+
+
 
 
  var gaugeOptions = {
@@ -98,6 +127,7 @@
 			}
 		}]
 	}));
+
 
 	// Bring life to the dials
 	setInterval(() => {
