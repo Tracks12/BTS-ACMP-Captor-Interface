@@ -13,6 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { NavTopComponent } from './nav-top/nav-top.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
 import { AdminPaneComponent } from './admin-pane/admin-pane.component';
+import { CarbonComponent } from './telemetry/carbon/carbon.component';
+import { ParticulesComponent } from './telemetry/particules/particules.component';
+import { OzoneComponent } from './telemetry/ozone/ozone.component';
 
 @NgModule({
 	imports: [
@@ -30,6 +33,9 @@ import { AdminPaneComponent } from './admin-pane/admin-pane.component';
 		NavTopComponent,
 		TelemetryComponent,
 		AdminPaneComponent,
+		CarbonComponent,
+		ParticulesComponent,
+		OzoneComponent,
 	],
 	bootstrap: [
 		AppComponent
