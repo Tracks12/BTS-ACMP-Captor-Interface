@@ -6,6 +6,9 @@
  * Location : /assets/styles/
  */
 
+/**
+ * Splash Screen Animation
+ */
 @keyframes splash {
 	0% {
 		text-shadow: 0 0 20px currentColor,

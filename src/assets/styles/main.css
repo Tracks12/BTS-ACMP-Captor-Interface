@@ -28,7 +28,7 @@ body {
 	height: 100%;
 	position: fixed;
 	width: 100%;
-	z-index: 10000;
+	z-index: 100;
 }
 
 #splash h1 {
@@ -45,3 +45,7 @@ body {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+
+/**
+ * END
+ */

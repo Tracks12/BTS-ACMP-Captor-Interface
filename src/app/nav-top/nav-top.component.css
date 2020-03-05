@@ -13,7 +13,7 @@ header {
 	left: 0;
 	position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index: 10;
 }
 
 header h1 {
@@ -40,6 +40,7 @@ header h1 {
 #menu-content {
 	background: rgb(0, 150, 250);
 	bottom: 0;
+	box-shadow: 0 0 .75em rgba(50, 50, 50, .75);
 	display: none;
 	letter-spacing: 3px;
 	position: fixed;
@@ -55,6 +56,12 @@ header h1 {
 ul {
 	list-style-type: none;
 	padding-top: 5em;
+}
+
+ul hr {
+	border: none;
+	border-top: 1px solid rgba(255, 255, 255);
+	margin: .5em 0;
 }
 
 ul li a {

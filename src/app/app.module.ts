@@ -16,6 +16,7 @@ import { ParticulesComponent } from './telemetry/particules/particules.component
 import { OzoneComponent } from './telemetry/ozone/ozone.component';
 import { AuthComponent } from './auth/auth.component';
 import { AdminComponent } from './auth/admin/admin.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
 	imports: [
@@ -24,7 +25,8 @@ import { AdminComponent } from './auth/admin/admin.component';
 		BrowserAnimationsModule,
 		RouterModule.forRoot([
 			{ path: 'login', component: AuthComponent },
-			{ path: 'telemetry', component: TelemetryComponent }
+			{ path: 'telemetry', component: TelemetryComponent },
+			{ path: 'about', component: AboutComponent }
 		])
 	],
 	declarations: [
@@ -36,6 +38,7 @@ import { AdminComponent } from './auth/admin/admin.component';
 		OzoneComponent,
 		AuthComponent,
 		AdminComponent,
+		AboutComponent,
 	],
 	bootstrap: [
 		AppComponent
