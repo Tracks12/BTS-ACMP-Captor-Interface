@@ -69,6 +69,15 @@ $(document).ready(() => {
 		$('#menu-close').click(() => $('#menu-content').fadeOut());
 	});
 
+	$('#splash').ready(() => {
+		$('#splash h1')
+			.delay(5000)
+			.fadeOut(1000)
+			.parent('div')
+			.delay(6000)
+			.fadeOut(500);
+	});
+
 	//js graphe particule fines
 	var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte
 	var urlInput = $('#fetchURL')[0];

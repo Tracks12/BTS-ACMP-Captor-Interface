@@ -1,0 +1,23 @@
+/**
+ * Project  : Capteur ACMP
+ * Date     : 25/05/2020
+ * Autor    : CARDINAL Florian
+ * Nom      : fonts.css
+ * Location : /assets/styles/
+ */
+
+@font-face {
+	font-family: "Lato";
+	src: url('../fonts/Lato/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: "ROCKET";
+	src: url('../fonts/ROCKET/ROCKET_WILDNESS.otf') format("otf"),
+		url('../fonts/ROCKET/ROCKET_WILDNESS.ttf') format("ttf"),
+		url('../fonts/ROCKET/ROCKET_WILDNESS.woff') format("woff");
+}
+
+/**
+ * END
+ */

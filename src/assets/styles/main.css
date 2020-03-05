@@ -6,13 +6,6 @@
  * Location : /assets/styles/
  */
 
-@font-face {
-	font-family: "ROCKET";
-	src: url('../fonts/ROCKET/ROCKET_WILDNESS.otf') format("otf"),
-		url('../fonts/ROCKET/ROCKET_WILDNESS.ttf') format("ttf"),
-		url('../fonts/ROCKET/ROCKET_WILDNESS.woff') format("woff");
-}
-
 * {
 	font-family: "Lato", sans-serif;
 	margin: 0;
@@ -29,14 +22,26 @@ body {
 	margin: 0;
 }
 
-#map {
-	background: rgb(238, 238, 238);
-	height: 100vh;
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 100vw;
+#splash {
+	background: rgb(220, 220, 220);
+	display: block;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 10000;
 }
 
-html, body { height: 100%; }
+#splash h1 {
+	animation: 3s linear 1s infinite alternate splash;
+	color: rgb(50, 50, 50);
+	font-family: "ROCKET";
+	font-size: 7.5em;
+	left: 50%;
+	letter-spacing: .1em;
+	position: absolute;
+	text-shadow: 0 0 20px currentColor,
+		0 0 40px currentColor,
+		0 0 60px currentColor;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

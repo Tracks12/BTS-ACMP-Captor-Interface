@@ -2,7 +2,9 @@
 a {
 	color: rgb(255, 255, 255);
 	display: block;
+	position: relative;
 	text-decoration: none;
+	transition: .2s all;
 	vertical-align: middle;
 }
 
@@ -32,7 +34,7 @@ header h1 {
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 10;
 }
 
 #menu-content {
@@ -43,7 +45,7 @@ header h1 {
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 10;
 }
 
 #menu-close {
@@ -52,9 +54,40 @@ header h1 {
 
 ul {
 	list-style-type: none;
-	padding-top: 4em;
+	padding-top: 5em;
 }
 
 ul li a {
-	padding: .75em 2em .75em 1em;
+	padding: 1em 3em 1em 4em;
+	text-transform: uppercase;
+}
+
+ul li a::before, a::after {
+	background: rgb(0, 150, 250);
+	content: '';
+	bottom: 5px;
+	position: absolute;
+	top: 5px;
+	transition: .2s all;
+	width: 0;
+}
+
+ul li a::before { left: 5px; }
+ul li a::after { right: 5px; }
+
+ul li a:hover {
+	background: rgb(255, 255, 255);
+	color: rgb(0, 150, 250);
+}
+
+ul li a:hover:before,
+ul li a:hover:after {
+	width: .5em;
+}
+
+ul li a i {
+	left: 1em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }

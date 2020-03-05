@@ -1,0 +1,25 @@
+/**
+ * Project  : Capteur ACMP
+ * Date     : 25/05/2020
+ * Autor    : CARDINAL Florian
+ * Nom      : animations.css
+ * Location : /assets/styles/
+ */
+
+@keyframes splash {
+	0% {
+		text-shadow: 0 0 20px currentColor,
+			0 0 40px currentColor,
+			0 0 60px currentColor;
+	}
+
+	100% {
+		text-shadow: 0 0 0 currentColor,
+			0 0 0 currentColor,
+			0 0 0 currentColor;
+	}
+}
+
+/**
+ * END
+ */
