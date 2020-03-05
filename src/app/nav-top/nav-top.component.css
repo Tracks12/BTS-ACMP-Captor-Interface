@@ -17,7 +17,7 @@ header {
 }
 
 header h1 {
-	font-family: "ROCKET", sans-serif;
+	font-family: "ROCKET";
 	letter-spacing: .25em;
 	padding: .5em .75em;
 	text-transform: uppercase;

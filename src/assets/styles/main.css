@@ -7,7 +7,7 @@
  */
 
 * {
-	font-family: "Lato", sans-serif;
+	font-family: "Lato", Ubuntu, Roboto, "Helvetica Neue", sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-	font-family: "Lato", Ubuntu, Roboto, "Helvetica Neue", sans-serif;
+	font-family: "Lato";
 	margin: 0;
 }
 
