@@ -23,6 +23,7 @@ import { OzoneComponent } from './telemetry/ozone/ozone.component';
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		RouterModule.forRoot([
+			{ path: 'admin', component: AdminPaneComponent },
 			{ path: 'login', component: LoginComponent },
 			{ path: 'telemetry', component: TelemetryComponent }
 		])
