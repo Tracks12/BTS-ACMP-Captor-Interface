@@ -64,11 +64,13 @@ $(document).ready(() => {
 	// Initialisation de la map
 	$('#map').ready(() => mapInit());
 
+	// Fonction d'ouverture/fermeture du menu
 	$('#menu-content').ready(() => {
 		$('#menu-open').click(() => $('#menu-content').fadeIn());
 		$('#menu-close').click(() => $('#menu-content').fadeOut());
 	});
 
+	// Splash Screen Animation
 	$('#splash').ready(() => {
 		$('#splash h1')
 			.delay(5000)
@@ -77,6 +79,9 @@ $(document).ready(() => {
 			.delay(6000)
 			.fadeOut(500);
 	});
+
+	$('.menu-interact-map').click(() => $('aside').fadeOut());
+	$('.menu-interact-aside').click(() => $('aside').fadeIn());
 
 	//js graphe particule fines
 	var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte

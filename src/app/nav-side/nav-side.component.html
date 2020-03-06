@@ -1,5 +1,5 @@
 <header>
-	<a [routerLink]="['/']">
+	<a class="menu-interact-map" [routerLink]="['/']">
 		<h1 class="titl"><i class="material-icons">wifi</i>acmp</h1>
 	</a>
 </header>
@@ -15,23 +15,23 @@
 
 	<ul class="menu-content">
 		<li>
-			<a [routerLink]="['/']" class="button fancy-button">
+			<a class="button fancy-button menu-interact-map" [routerLink]="['/']">
 				<i class="material-icons">map</i> map
 			</a>
 		</li>
 		<li>
-			<a [routerLink]="['/telemetry']" class="button fancy-button">
+			<a class="button fancy-button menu-interact-aside" [routerLink]="['/telemetry']">
 				<i class="material-icons">timeline</i> télémetrie
 			</a>
 		</li>
 		<li>
-			<a [routerLink]="['/about']" class="button fancy-button">
+			<a class="button fancy-button menu-interact-aside" [routerLink]="['/about']">
 				<i class="material-icons">info</i> à propos
 			</a>
 		</li>
 		<hr />
 		<li>
-			<a [routerLink]="['/login']" class="button fancy-button">
+			<a class="button fancy-button menu-interact-aside" [routerLink]="['/login']">
 				<i class="material-icons">perm_identity</i> connexion
 			</a>
 		</li>

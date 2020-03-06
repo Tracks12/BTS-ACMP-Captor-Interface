@@ -22,6 +22,9 @@ body {
 	margin: 0;
 }
 
+/**
+ * Splash Screen Style
+ */
 #splash {
 	background: rgb(220, 220, 220);
 	display: block;
@@ -45,6 +48,72 @@ body {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+
+/**
+ * Form Style
+ */
+
+form {
+	display: block;
+}
+
+form .input-area {
+	display: block;
+	position: relative;
+}
+
+form .input-area label {
+	color: rgb(50, 50, 50);
+	position: absolute;
+	top: .5em;
+	transition: .25s all;
+	z-index: -1;
+}
+
+form .input-area label::first-letter {
+	text-transform: uppercase;
+}
+
+form .input-area input {
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid currentColor;
+	box-shadow: none;
+	color: rgb(50, 50, 50);
+	display: block;
+	font-size: 1em;
+	margin: .25em 0 1.5em 0;
+	outline: none;
+	padding: .5em .25em;
+}
+
+form .input-area input:focus ~ label,
+form .input-area input:valid ~ label {
+	font-size: .75em;
+	top: -1em;
+}
+
+form input[type="submit"] {
+	background: rgb(0, 250, 100);
+	border: 1px solid rgb(0, 250, 100);
+	border-radius: .25em;
+	box-sizing: border-box;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	display: block;
+	font-size: 1.25em;
+	margin: 1.5em 0 .25em 0;
+	padding: .5em;
+	text-transform: capitalize;
+	transition: .2s all;
+	width: 100%;
+}
+
+form input[type="submit"]:hover {
+	background: transparent;
+	color: rgb(0, 250, 100);
+}
+
 
 /**
  * END

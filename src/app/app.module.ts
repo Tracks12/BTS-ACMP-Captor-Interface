@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 
 // Importations des modules propres au site
 import { AppRoutingModule } from './app-routing.module';
-import { NavTopComponent } from './nav-top/nav-top.component';
+import { NavTopComponent } from './nav-side/nav-side.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
 import { CarbonComponent } from './telemetry/carbon/carbon.component';
 import { ParticulesComponent } from './telemetry/particules/particules.component';

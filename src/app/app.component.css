@@ -12,8 +12,12 @@
 aside {
 	background: rgb(255, 255, 255);
 	border-radius: 1em;
-	margin: 6em 2em 0 2em;
+	box-shadow: 0 0 10px rgba(50, 50, 50, .5);
+	display: none;
+	left: 50%;
+	margin: 5em 0 0 0;
 	padding: 1em;
 	position: absolute;
+	transform: translateX(-50%);
 	z-index: 1;
 }
