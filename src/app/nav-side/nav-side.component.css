@@ -40,7 +40,7 @@ header h1 {
 #menu-content {
 	background: rgb(0, 150, 250);
 	bottom: 0;
-	box-shadow: 0 0 .75em rgba(50, 50, 50, .75);
+	box-shadow: 0 0 10px rgba(50, 50, 50, .5);
 	display: none;
 	letter-spacing: 3px;
 	position: fixed;
