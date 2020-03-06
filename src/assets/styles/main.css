@@ -52,7 +52,6 @@ body {
 /**
  * Form Style
  */
-
 form {
 	display: block;
 }
@@ -64,6 +63,7 @@ form .input-area {
 
 form .input-area label {
 	color: rgb(50, 50, 50);
+	margin-left: 1.75em;
 	position: absolute;
 	top: .5em;
 	transition: .25s all;
@@ -84,12 +84,22 @@ form .input-area input {
 	font-size: 1em;
 	margin: .25em 0 1.5em 0;
 	outline: none;
-	padding: .5em .25em;
+	padding: .5em .25em .5em 1.75em;
+	transition: .2s all;
+}
+
+form .input-area input:valid {
+	border-color: rgb(0, 250, 100);
+}
+
+form .input-area input:focus {
+	border-color: rgb(0, 150, 250);
 }
 
 form .input-area input:focus ~ label,
 form .input-area input:valid ~ label {
 	font-size: .75em;
+	margin-left: 0;
 	top: -1em;
 }
 
@@ -102,7 +112,7 @@ form input[type="submit"] {
 	cursor: pointer;
 	display: block;
 	font-size: 1.25em;
-	margin: 1.5em 0 .25em 0;
+	margin: 1.5em 0 0 0;
 	padding: .5em;
 	text-transform: capitalize;
 	transition: .2s all;
@@ -113,7 +123,6 @@ form input[type="submit"]:hover {
 	background: transparent;
 	color: rgb(0, 250, 100);
 }
-
 
 /**
  * END
