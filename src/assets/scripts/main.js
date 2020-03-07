@@ -61,15 +61,6 @@ var gaugeOptions = {
 };
 
 $(document).ready(() => {
-	// Initialisation de la map
-	$('#map').ready(() => mapInit());
-
-	// Fonction d'ouverture/fermeture du menu
-	$('#menu-content').ready(() => {
-		$('#menu-open').click(() => $('#menu-content').fadeIn());
-		$('#menu-close').click(() => $('#menu-content').fadeOut());
-	});
-
 	// Splash Screen Animation
 	$('#splash').ready(() => {
 		$('#splash h1')
@@ -80,8 +71,23 @@ $(document).ready(() => {
 			.fadeOut(500);
 	});
 
-	$('.menu-interact-map').click(() => $('aside').fadeOut());
-	$('.menu-interact-aside').click(() => $('aside').fadeIn());
+	// Initialisation de la map
+	$('#map').ready(() => mapInit());
+
+	// Fonction d'ouverture/fermeture du menu
+	$('#menu-content').ready(() => {
+		$('#menu-open').click(() => $('#menu-content').fadeIn());
+		$('#menu-close').click(() => $('#menu-content').fadeOut());
+
+		$('.menu-interact-map').click(() => $('aside').fadeOut());
+		$('.menu-interact-aside').click(() => $('aside').fadeIn());
+	});
+
+	// Affichage de la box si jamais il y a instance
+	$('aside').ready(() => {
+		if($(location).attr('pathname').split('/').length > 1)
+			$('aside').fadeIn();
+	});
 
 	//js graphe particule fines
 	var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte
