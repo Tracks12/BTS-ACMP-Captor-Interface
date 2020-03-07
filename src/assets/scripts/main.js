@@ -85,7 +85,7 @@ $(document).ready(() => {
 
 	// Affichage de la box si jamais il y a instance
 	$('aside').ready(() => {
-		if($(location).attr('pathname').split('/').length > 1)
+		if($(location).attr('pathname').split('/')[1].length > 0)
 			$('aside').fadeIn();
 	});
 
