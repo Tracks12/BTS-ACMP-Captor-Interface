@@ -97,7 +97,7 @@ function mapInit() {
 	var customStyle = {
 		strokeColor: 'dark green',
 		fillColor: 'rgba(0, 255, 100, 0.2)',
-		lineWidth: 1,
+		lineWidth: 2,
 	};
 
 	drawCircle(map, myPos, customStyle);
