@@ -13,7 +13,7 @@
  	$('#menu-close').click(() => $('#menu-content').fadeOut());
  	});
 
-//code js pour capteur particules (bar chart)
+//Bar chart
     document.addEventListener('DOMContentLoaded', function () {     //???? ligne obligatoire
           var myChart = Highcharts.chart('container', {
               chart: {
@@ -42,7 +42,7 @@
 
 
 
-
+//Solid Gauge
 
  var gaugeOptions = {
  	chart: {
