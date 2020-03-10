@@ -21,6 +21,8 @@ import { AboutComponent } from './about/about.component';
 @NgModule({
 	imports: [
 		BrowserModule,
+		HttpClientModule,
+		ReactiveFormsModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		RouterModule.forRoot([

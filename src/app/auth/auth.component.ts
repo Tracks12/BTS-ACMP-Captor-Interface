@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-auth',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
+	checkoutForm;
 
-  constructor() { }
+  constructor(
+		private formBuilder: FormBuilder
+	) {
+		this.checkoutForm = this.formBuilder.group({
+			uname: '',
+			upass: ''
+		});
+	}
 
-  ngOnInit() {
-  }
+	onSubmit(data) {
+		console.log(data);
 
+		this.checkoutForm.reset();
+	}
+
+	ngOnInit() {
+
+	}
 }
