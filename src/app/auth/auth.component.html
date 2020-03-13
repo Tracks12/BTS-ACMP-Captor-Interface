@@ -1,15 +1,19 @@
 <h2>connexion</h2>
 
 <form id="form-area" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+	<!-- Champ utilisateur -->
 	<div class="input-area">
 		<input id="uname" type="text" formControlName="uname" required />
 		<label for="uname">nom d'utilisateur</label>
 		<i class="material-icons">person_outline</i>
 	</div>
+	<!-- Champ mot de pass -->
 	<div class="input-area">
 		<input id="upass" type="password" formControlName="upass" required />
 		<label for="upass">mot de passe</label>
 		<i class="material-icons">vpn_key</i>
 	</div>
+	<!-- Soumission et confirmation du formulaire -->
 	<input type="submit" value="connexion" />
+	<p class="auth-return"></p>
 </form>

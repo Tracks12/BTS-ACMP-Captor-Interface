@@ -13,15 +13,16 @@ export class AuthComponent implements OnInit {
 		private formBuilder: FormBuilder
 	) {
 		this.checkoutForm = this.formBuilder.group({
-			uname: '',
-			upass: ''
+			uname: null,
+			upass: null
 		});
 	}
 
 	onSubmit(data) {
-		console.log(data);
+		console.info(data);
 
-		this.checkoutForm.reset();
+		if(data.uname && data.upass)
+			this.checkoutForm.reset();
 	}
 
 	ngOnInit() {

@@ -3,3 +3,7 @@
 	position: absolute;
 	top: .25em;
 }
+
+.auth-return {
+	color: rgb(200, 0, 0);
+}
