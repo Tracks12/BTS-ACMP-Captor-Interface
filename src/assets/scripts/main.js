@@ -140,19 +140,19 @@ $(document).ready(() => {
 			createChart();
 
 			// The Co2 gauge
-			var chartCo2 = Highcharts.chart('container-co2', Highcharts.merge(gaugeOptions, {
+			var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, {
 				yAxis: {
 					min: 0,
 					max: 200,
 					title: {
-						text: 'CO²'
+						text: 'chartCo2'
 					}
 				},
 				credits: {
 					enabled: false
 				},
 				series: [{
-					name: 'CO²',
+					name: 'co2',
 					data: [80],
 					dataLabels: {
 						format:
@@ -162,7 +162,7 @@ $(document).ready(() => {
 							'</div>'
 						},
 					tooltip: {
-						valueSuffix: 'CO²'
+						valueSuffix: 'Co2'
 					}
 				}]
 			}));
