@@ -19,6 +19,8 @@ export class AuthComponent implements OnInit {
 	}
 
 	onSubmit(data) {
+		data.upass = btoa(data.upass);
+
 		console.info(data);
 
 		if(data.uname && data.upass)
