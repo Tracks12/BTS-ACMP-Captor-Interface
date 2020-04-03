@@ -16,8 +16,21 @@ aside {
 	display: none;
 	left: 50%;
 	margin: 5em 0 0 0;
+	overflow: hidden;
 	padding: 1em;
 	position: absolute;
 	transform: translateX(-50%);
 	z-index: 1;
+}
+
+aside #aside-close {
+	cursor: pointer;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: .2s
+}
+aside #aside-close:hover {
+	background: rgba(0, 0, 0, .05);
 }

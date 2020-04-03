@@ -89,6 +89,8 @@ $(document).ready(() => {
 
 		if(length > 0)
 			$('aside').fadeIn();
+
+		$('#aside-close').click(() => $('aside').fadeOut());
 	});
 
 	$('.menu-interact-telemetry').click(function() {

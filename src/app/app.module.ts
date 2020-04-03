@@ -5,9 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
 
 // Importations des modules propres au site
+import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavTopComponent } from './nav-side/nav-side.component';
 import { TelemetryComponent } from './telemetry/telemetry.component';
@@ -40,7 +40,7 @@ import { AboutComponent } from './about/about.component';
 		OzoneComponent,
 		AuthComponent,
 		AdminComponent,
-		AboutComponent,
+		AboutComponent
 	],
 	bootstrap: [
 		AppComponent
