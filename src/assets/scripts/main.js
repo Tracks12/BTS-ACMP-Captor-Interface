@@ -66,12 +66,12 @@
  };
 
  // The speed gauge
- var chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
+ var chartSpeed = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, {
      yAxis: {
          min: 0,
          max: 200,
          title: {
-             text: 'Speed'
+             text: 'Co2'
          }
      },
 
@@ -80,46 +80,17 @@
      },
 
      series: [{
-         name: 'Speed',
+         name: 'Co2',
          data: [80],
          dataLabels: {
              format:
                  '<div style="text-align:center">' +
                  '<span style="font-size:25px">{y}</span><br/>' +
-                 '<span style="font-size:12px;opacity:0.4">km/h</span>' +
+                 '<span style="font-size:12px;opacity:0.4">ppm</span>' +
                  '</div>'
          },
          tooltip: {
-             valueSuffix: ' km/h'
-         }
-     }]
-
- }));
-
- // The RPM gauge
- var chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
-     yAxis: {
-         min: 0,
-         max: 5,
-         title: {
-             text: 'RPM'
-         }
-     },
-
-     series: [{
-         name: 'RPM',
-         data: [1],
-         dataLabels: {
-             format:
-                 '<div style="text-align:center">' +
-                 '<span style="font-size:25px">{y:.1f}</span><br/>' +
-                 '<span style="font-size:12px;opacity:0.4">' +
-                 '* 1000 / min' +
-                 '</span>' +
-                 '</div>'
-         },
-         tooltip: {
-             valueSuffix: ' revolutions/min'
+             valueSuffix: 'ppm'
          }
      }]
 
@@ -127,7 +98,7 @@
 
  // Bring life to the dials
  setInterval(function () {
-     // Speed
+     // Co2
      var point,
          newVal,
          inc;
@@ -138,19 +109,6 @@
          newVal = point.y + inc;
 
          if (newVal < 0 || newVal > 200) {
-             newVal = point.y - inc;
-         }
-
-         point.update(newVal);
-     }
-
-     // RPM
-     if (chartRpm) {
-         point = chartRpm.series[0].points[0];
-         inc = Math.random() - 0.5;
-         newVal = point.y + inc;
-
-         if (newVal < 0 || newVal > 5) {
              newVal = point.y - inc;
          }
 
