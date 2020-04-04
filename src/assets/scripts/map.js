@@ -100,12 +100,11 @@ function mapInit() {
 		lineWidth: 2,
 	};
 
-	drawCircle(map, myPos, customStyle);
+	//drawCircle(map, myPos, customStyle);
 
-	var myLoc = `${myPos.lat},${myPos.lng}`;
 	var routingParams = {
-		'mode': 'fastest;car;traffic:enabled',
-		'start': myLoc,
+		'mode': 'fastest;car;traffic:disabled',
+		'start': `${myPos.lat},${myPos.lng}`,
 		'range': '900',
 		'rangetype': 'time'
 	};
