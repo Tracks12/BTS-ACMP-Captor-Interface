@@ -40,7 +40,7 @@ $(document).ready(() => {
 	});
 
 	$('.menu-interact-telemetry').click(function() {
-		$(this).ready(() => graphs(gaugeOptions));
+		$(this).ready(() => graphs());
 	});
 });
 

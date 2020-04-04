@@ -60,7 +60,7 @@ var gaugeOptions = {
 	}
 };
 
-function graphs(opts) {
+function graphs() {
 	//js graphe particule fines
 	var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte
 	var urlInput = $('#fetchURL')[0];
@@ -68,7 +68,7 @@ function graphs(opts) {
 	var pollingInput = $('#pollingTime')[0];
 
 	// The Co2 gauge
-	var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(opts, {
+	var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, {
 		yAxis: {
 			min: 0,
 			max: 200,
