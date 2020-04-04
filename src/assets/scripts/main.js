@@ -73,13 +73,13 @@ var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, 
 		enabled: false
 	},
 	series: [{
-		name: 'co2',
+		name: 'Co2',
 		data: [80],
 		dataLabels: {
 			format:
 				'<div style="text-align:center">' +
 					'<span style="font-size:25px">{y}</span><br/>' +
-					'<span style="font-size:12px;opacity:0.4">CO²</span>' +
+					'<span style="font-size:12px;opacity:0.4">Co2</span>' +
 				'</div>'
 			},
 		tooltip: {
