@@ -60,6 +60,34 @@ var gaugeOptions = {
 	}
 };
 
+// The Co2 gauge
+var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, {
+	yAxis: {
+		min: 0,
+		max: 200,
+		title: {
+			text: 'chartCo2'
+		}
+	},
+	credits: {
+		enabled: false
+	},
+	series: [{
+		name: 'co2',
+		data: [80],
+		dataLabels: {
+			format:
+				'<div style="text-align:center">' +
+					'<span style="font-size:25px">{y}</span><br/>' +
+					'<span style="font-size:12px;opacity:0.4">CO²</span>' +
+				'</div>'
+			},
+		tooltip: {
+			valueSuffix: 'Co2'
+		}
+	}]
+}));
+
 $(document).ready(() => {
 	// Splash Screen Animation
 	$('#splash').ready(() => {
@@ -140,34 +168,6 @@ $(document).ready(() => {
 
 			// Create the chart
 			createChart();
-
-			// The Co2 gauge
-			var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, {
-				yAxis: {
-					min: 0,
-					max: 200,
-					title: {
-						text: 'chartCo2'
-					}
-				},
-				credits: {
-					enabled: false
-				},
-				series: [{
-					name: 'co2',
-					data: [80],
-					dataLabels: {
-						format:
-							'<div style="text-align:center">' +
-								'<span style="font-size:25px">{y}</span><br/>' +
-								'<span style="font-size:12px;opacity:0.4">CO²</span>' +
-							'</div>'
-						},
-					tooltip: {
-						valueSuffix: 'Co2'
-					}
-				}]
-			}));
 
 			// Bring life to the dials
 			setInterval(() => {
