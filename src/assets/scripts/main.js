@@ -6,190 +6,158 @@
  * Location : /assets/scripts/
  */
 
-var gaugeOptions = {
-	chart: {
-		type: 'solidgauge'
-	},
-	title: null,
-	pane: {
-		center: [ '50%', '85%' ],
-		size: '140%',
-		startAngle: -90,
-		endAngle: 90,
-		background: {
-			backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
-			innerRadius: '60%',
-			outerRadius: '100%',
-			shape: 'arc'
-		}
-	},
-	exporting: {
-		enabled: false
-	},
-	tooltip: {
-		enabled: false
-	},
+ var gaugeOptions = {
+     chart: {
+         type: 'solidgauge'
+     },
 
-	// the value axis
-	yAxis: {
-		stops: [
-			[ 0.1, '#55BF3B' ], // green
-			[ 0.5, '#DDDF0D' ], // yellow
-			[ 0.9, '#DF5353' ] // red
-		],
-		lineWidth: 0,
-		tickWidth: 0,
-		minorTickInterval: null,
-		tickAmount: 2,
-		title: {
-			y: -70
-		},
-		labels: {
-			y: 16
-		}
-	},
+     title: null,
 
-	plotOptions: {
-		solidgauge: {
-			dataLabels: {
-				y: 5,
-				borderWidth: 0,
-				useHTML: true
-			}
-		}
-	}
-};
+     pane: {
+         center: ['50%', '85%'],
+         size: '140%',
+         startAngle: -90,
+         endAngle: 90,
+         background: {
+             backgroundColor:
+                 Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+             innerRadius: '60%',
+             outerRadius: '100%',
+             shape: 'arc'
+         }
+     },
 
-$(document).ready(() => {
-	// Splash Screen Animation
-	$('#splash').ready(() => {
-		$('#splash h1')
-			.delay(5000)
-			.fadeOut(1000)
-			.parent('div')
-			.delay(6000)
-			.fadeOut(500);
-	});
+     exporting: {
+         enabled: false
+     },
 
-	// Initialisation de la map
-	$('#map').ready(() => mapInit());
+     tooltip: {
+         enabled: false
+     },
 
-	// Fonction d'ouverture/fermeture du menu
-	$('#menu-content').ready(() => {
-		$('#menu-open').click(() => $('#menu-content').fadeIn());
-		$('#menu-close').click(() => $('#menu-content').fadeOut());
+     // the value axis
+     yAxis: {
+         stops: [
+             [0.1, '#55BF3B'], // green
+             [0.5, '#DDDF0D'], // yellow
+             [0.9, '#DF5353'] // red
+         ],
+         lineWidth: 0,
+         tickWidth: 0,
+         minorTickInterval: null,
+         tickAmount: 2,
+         title: {
+             y: -70
+         },
+         labels: {
+             y: 16
+         }
+     },
 
-		$('.menu-interact-map').click(() => $('aside').css('display', 'none'));
-		$('.menu-interact-aside, .menu-interact-telemetry').click(() => $('aside').fadeIn());
-	});
+     plotOptions: {
+         solidgauge: {
+             dataLabels: {
+                 y: 5,
+                 borderWidth: 0,
+                 useHTML: true
+             }
+         }
+     }
+ };
 
-	// Affichage de la box si jamais il y a instance
-	$('aside').ready(() => {
-		let length = $(location).attr('pathname').split('/')[1].length;
+ // The speed gauge
+ var chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
+     yAxis: {
+         min: 0,
+         max: 200,
+         title: {
+             text: 'Speed'
+         }
+     },
 
-		if(length > 0)
-			$('aside').fadeIn();
+     credits: {
+         enabled: false
+     },
 
-		$('#aside-close').click(() => $('aside').fadeOut());
-	});
+     series: [{
+         name: 'Speed',
+         data: [80],
+         dataLabels: {
+             format:
+                 '<div style="text-align:center">' +
+                 '<span style="font-size:25px">{y}</span><br/>' +
+                 '<span style="font-size:12px;opacity:0.4">km/h</span>' +
+                 '</div>'
+         },
+         tooltip: {
+             valueSuffix: ' km/h'
+         }
+     }]
 
-	$('.menu-interact-telemetry').click(function() {
-		$(this).ready(() => {
-			//js graphe particule fines
-			var defaultData = 'https://demo-live-data.highcharts.com/time-data.csv'; //fichier qui recevra les données de la carte
-			var urlInput = $('#fetchURL')[0];
-			var pollingCheckbox = $('#enablePolling')[0];
-			var pollingInput = $('#pollingTime')[0];
+ }));
 
-			function createChart() {
-				Highcharts.chart('container', {
-					chart: {
-						type: 'spline'
-					},
-					title: {
-						text: 'Live Data'
-					},
-					accessibility: {
-						announceNewData: {
-							enabled: true,
-							minAnnounceInterval: 15000,
-							announcementFormatter: (allSeries, newSeries, newPoint) => {
-								if(newPoint)
-									return `New point added. Value: ${newPoint.y}`;
+ // The RPM gauge
+ var chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
+     yAxis: {
+         min: 0,
+         max: 5,
+         title: {
+             text: 'RPM'
+         }
+     },
 
-								return false;
-							}
-						}
-					},
-					data: {
-						csvURL: urlInput.value,
-						enablePolling: pollingCheckbox.checked === true,
-						dataRefreshRate: parseInt(pollingInput.value, 10)
-					}
-				});
+     series: [{
+         name: 'RPM',
+         data: [1],
+         dataLabels: {
+             format:
+                 '<div style="text-align:center">' +
+                 '<span style="font-size:25px">{y:.1f}</span><br/>' +
+                 '<span style="font-size:12px;opacity:0.4">' +
+                 '* 1000 / min' +
+                 '</span>' +
+                 '</div>'
+         },
+         tooltip: {
+             valueSuffix: ' revolutions/min'
+         }
+     }]
 
-				if(pollingInput.value < 1 || !pollingInput.value)
-					pollingInput.value = 1;
-			}
+ }));
 
-			urlInput.value = defaultData;
+ // Bring life to the dials
+ setInterval(function () {
+     // Speed
+     var point,
+         newVal,
+         inc;
 
-			// We recreate instead of using chart update to make sure the loaded CSV
-			// and such is completely gone.
-			pollingCheckbox.onchange = urlInput.onchange = pollingInput.onchange = createChart;
+     if (chartSpeed) {
+         point = chartSpeed.series[0].points[0];
+         inc = Math.round((Math.random() - 0.5) * 100);
+         newVal = point.y + inc;
 
-			// Create the chart
-			createChart();
+         if (newVal < 0 || newVal > 200) {
+             newVal = point.y - inc;
+         }
 
-			// The Co2 gauge
-			var chartCo2 = Highcharts.chart('container-Co2', Highcharts.merge(gaugeOptions, {
-				yAxis: {
-					min: 0,
-					max: 200,
-					title: {
-						text: 'chartCo2'
-					}
-				},
-				credits: {
-					enabled: false
-				},
-				series: [{
-					name: 'co2',
-					data: [80],
-					dataLabels: {
-						format:
-							'<div style="text-align:center">' +
-								'<span style="font-size:25px">{y}</span><br/>' +
-								'<span style="font-size:12px;opacity:0.4">CO²</span>' +
-							'</div>'
-						},
-					tooltip: {
-						valueSuffix: 'Co2'
-					}
-				}]
-			}));
+         point.update(newVal);
+     }
 
-			// Bring life to the dials
-			setInterval(() => {
-				// Speed
-				var point,
-					newVal,
-					inc;
+     // RPM
+     if (chartRpm) {
+         point = chartRpm.series[0].points[0];
+         inc = Math.random() - 0.5;
+         newVal = point.y + inc;
 
-				if(chartSpeed) {
-					point = chartSpeed.series[0].points[0];
-					inc = Math.round((Math.random() - 0.5) * 100);
-					newVal = point.y + inc;
+         if (newVal < 0 || newVal > 5) {
+             newVal = point.y - inc;
+         }
 
-					if (newVal < 0 || newVal > 200)
-						newVal = point.y - inc;
+         point.update(newVal);
+     }
+ }, 2000);
 
-					point.update(newVal);
-				}
-			}, 2000);
-		});
-	});
-});
 
 /**
  * END
