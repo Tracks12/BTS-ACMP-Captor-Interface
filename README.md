@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 > A redesign in php is available at [BTS-ACMP-MVC](https://github.com/Tracks12/BTS-ACMP-MVC)
 
+---
+
 ## Website dependencies
 
 Query of Front End dependencies :
