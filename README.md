@@ -3,7 +3,7 @@ Sensor Group Project as part of the BTS 2nd year training course
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-> An overhaul in php is available at [BTS-ACMP-MVC](https://github.com/Tracks12/BTS-ACMP-MVC)
+> A redesign in php is available at [BTS-ACMP-MVC](https://github.com/Tracks12/BTS-ACMP-MVC)
 
 ## Website dependencies
 
